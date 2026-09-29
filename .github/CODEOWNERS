@@ -1,0 +1,9 @@
+# Global owners
+* @altshiftomar-del
+
+# Feature-specific (optional)
+/lib/features/auth/ @altshiftomar-del
+/lib/features/transactions/ @altshiftomar-del
+/lib/features/budget/ @altshiftomar-del
+/lib/features/settings/ @altshiftomar-del
+/lib/core/ @altshiftomar-del
