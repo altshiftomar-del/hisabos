@@ -1,0 +1,29 @@
+# Conventional Commits Format
+# <type>[optional scope]: <description>
+# [optional body]
+# [optional footer(s)]
+
+# Types:
+# feat     - New feature
+# fix      - Bug fix
+# refactor - Code change that neither fixes a bug nor adds a feature
+# chore    - Maintenance (build, deps, config)
+# docs     - Documentation only
+# style    - Formatting, missing semi colons, etc (no code change)
+# test     - Adding missing tests or correcting existing tests
+# perf     - Performance improvement
+# ci       - CI/CD changes
+# build    - Build system or external dependencies
+# revert   - Reverts a previous commit
+
+# Scopes (examples):
+# auth, transactions, budget, settings, ui, core, deps
+
+# Examples:
+# feat(transactions): add category filter to list
+# fix(budget): correct overspend calculation
+# refactor(core): extract theme constants
+# chore(deps): upgrade flutter_lints to 6.0.0
+# docs: update README with setup instructions
+
+# Your commit message:
