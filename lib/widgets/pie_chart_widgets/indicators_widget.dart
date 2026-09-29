@@ -1,4 +1,4 @@
-import 'package:daily_spending/models/pie_data.dart';
+import 'package:hisabos/models/pie_data.dart';
 import 'package:flutter/material.dart';
 
 class IndicatorsWidget extends StatelessWidget {
@@ -54,3 +54,4 @@ class IndicatorsWidget extends StatelessWidget {
         ],
       );
 }
+

@@ -1,5 +1,5 @@
-import 'package:daily_spending/screens/home_screen.dart';
-import 'package:daily_spending/screens/party_list_screen.dart';
+import 'package:hisabos/screens/home_screen.dart';
+import 'package:hisabos/screens/party_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -155,3 +155,4 @@ class AppDrawer extends StatelessWidget {
     );
   }
 }
+

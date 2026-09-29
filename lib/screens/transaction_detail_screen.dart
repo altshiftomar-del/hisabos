@@ -253,3 +253,4 @@ class _TransactionDetailScreenState extends State<TransactionDetailScreen> {
     );
   }
 }
+

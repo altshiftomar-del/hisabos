@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 
 import 'package:fl_chart/fl_chart.dart';
 
-import 'package:daily_spending/models/transaction.dart';
+import 'package:hisabos/models/transaction.dart';
 
 class WeaklyStats extends StatefulWidget {
   final List<Transaction> rescentTransactions;
@@ -206,3 +206,4 @@ class _WeaklyStatsState extends State<WeaklyStats> {
     );
   }
 }
+

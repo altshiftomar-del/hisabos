@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:random_color/random_color.dart';
 
-import 'package:daily_spending/models/transaction.dart';
+import 'package:hisabos/models/transaction.dart';
 
 class PieData {
   final String name;
@@ -63,3 +63,4 @@ class PieData {
     return finalList;
   }
 }
+

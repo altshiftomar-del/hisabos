@@ -1,260 +1,143 @@
 <div align="center">
 
-# BUDGETBUDY
+# HISABOS
 
-_Detects Spendings, Ensures Quality, Accelerates Money Management_
+_Personal Finance Manager with Khatabook-style Party Ledger_
 
-[![Download APK](https://img.shields.io/badge/Download-APK%20v1.0.0-brightgreen?style=for-the-badge&logo=android)](https://github.com/devaldaki3/BudgetBudy/releases/latest)
+![version](https://img.shields.io/badge/version-1.0.0-blue) ![dart](https://img.shields.io/badge/dart-100%25-blue) ![license](https://img.shields.io/badge/license-MIT-green) ![flutter](https://img.shields.io/badge/flutter-3.19-blue)
 
-![last commit](https://img.shields.io/github/last-commit/devaldaki3/BudgetBudy) ![version](https://img.shields.io/badge/version-1.0.0-blue) ![dart](https://img.shields.io/badge/dart-100%25-blue) ![license](https://img.shields.io/badge/license-MIT-green)
-
-_Built with the tools and technologies:_
-
+_Built with:_
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white) ![Provider](https://img.shields.io/badge/Provider-FF6B6B?logo=flutter) ![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white) ![Material Design](https://img.shields.io/badge/Material%20Design-757575?logo=material-design)
 
 </div>
 
 ---
 
-<!-- App screenshot for quick visual reference -->
-
-<div align="center">
-  <img src="assets/images/app_icon.png" alt="App Screenshot" width="260" />
-</div>
-
-<hr>
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-  - [Clone the Repository](#1-clone-the-repository)
-  - [Install Requirements](#2-install-requirements)
-  - [Run the Application](#3-run-the-application)
-- [Model & Data Layer](#model--data-layer)
-- [Analytics](#analytics)
-- [Export Options](#export-options)
-- [License](#license)
-- [Author](#author)
-- [Screenshots](#screenshots)
-
 ## Overview
 
-**BudgetBudy** is a personal finance and ledger management app built with **Flutter**. It combines:
+**HisabOS** (হিসাবওএস) is a personal finance and ledger management app built with **Flutter**. It combines:
 
 - a **daily spending tracker** for your own expenses, and
-- a **Khatabook-style party ledger** for tracking who you will give / who you will get money from.
+- a **Khatabook-style party ledger** (খাতাবই) for tracking who you will give / who you will get money from.
 
-It's designed to streamline **personal finance management**, reduce manual calculation errors, and provide real-time insights using local SQLite storage — all **offline**, no internet required.
-
-## Features
-
-- 📊 **Daily/Weekly/Monthly/Yearly Views**
-
-  Track your spending across multiple time ranges with tabbed navigation.
-
-- 💰 **Category-Based Transactions**
-
-  Add expenses with title, amount, date, and category for better organization.
-
-- 👥 **Khatabook-Style Party Ledger**
-
-  Create parties (contacts) and track "gave" or "got" transactions per party.
-
-- 📈 **Automatic Balance Calculation**
-
-  See **You will give** and **You will get** totals automatically calculated.
-
-- 🎨 **Modern UI Design**
-
-  Clean Material Design with custom fonts (`OpenSans`, `Quicksand`) and color-coded balances.
-
-- 📊 **Visual Analytics**
-
-  Charts and graphs using `fl_chart` for spending patterns and trends.
-
-- 💾 **Offline Storage**
-
-  All data stored locally using SQLite — no backend or internet connection needed.
-
-- 🔄 **Real-Time Updates**
-
-  Provider state management ensures UI updates instantly when data changes.
-
-## Tech Stack
-
-- **Framework/UI**: Flutter, Material Design
-- **Language**: Dart
-- **State Management**: Provider
-- **Local Database**: SQLite (sqflite)
-  - Separate databases for spendings (`spendings.db`) and party ledger (`khatabook.db`)
-- **Utilities & Libraries**:
-  - `intl` – Date formatting and localization
-  - `fl_chart` – Beautiful charts and graphs
-  - `random_color` – Color utilities for UI
-  - `url_launcher` – Open external links
-
-## Getting Started
-
-### 📥 Option 1: Download APK (Recommended for Users)
-
-**For Android users who just want to use the app:**
-
-1. **Download the latest APK** from the [Releases page](https://github.com/devaldaki3/BudgetBudy/releases/latest)
-2. **Enable "Install from Unknown Sources"** in your Android settings:
-   - Go to Settings → Security → Unknown Sources (Enable)
-   - Or Settings → Apps → Special Access → Install Unknown Apps → Select your browser → Allow
-3. **Install the APK** by opening the downloaded file
-4. **Open BudgetBudy** and start tracking your finances! 🎉
-
-**Requirements:**
-- Android 5.0 (Lollipop) or higher
-- ~20 MB storage space
+Designed for **Bangladesh/India context** — offline-first, local SQLite storage, no internet required.
 
 ---
 
-### 🛠️ Option 2: Build from Source (For Developers)
+## Features
 
-**For developers who want to modify or contribute:**
+- 📊 **Daily/Weekly/Monthly/Yearly Views** — Track spending across time ranges
+- 💰 **Category-Based Transactions** — Title, amount, date, category
+- 👥 **Khatabook Party Ledger** — Create parties, track "gave/got" transactions
+- 📈 **Auto Balance Calculation** — "You will give" / "You will get" totals
+- 🎨 **Modern Material 3 UI** — Custom fonts (OpenSans, Quicksand), color-coded
+- 📊 **Visual Analytics** — Charts via `fl_chart`
+- 💾 **Offline Storage** — SQLite (`spendings.db`, `khatabook.db`)
+- 🔄 **Real-Time Updates** — Provider state management
 
-#### 1. Clone the Repository
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Framework | Flutter 3.x |
+| Language | Dart 3.x |
+| State Mgmt | Provider |
+| Database | SQLite (sqflite) |
+| Charts | fl_chart |
+| Utils | intl, random_color, url_launcher |
+
+---
+
+## Getting Started
+
+### For Users (Android)
+
+1. Download latest APK from [Releases](https://github.com/altshiftomar-del/hisabos/releases/latest)
+2. Enable "Install from Unknown Sources" in Android settings
+3. Install APK and start tracking! 🎉
+
+**Requirements:** Android 5.0+, ~20 MB storage
+
+---
+
+### For Developers
 
 ```bash
-git clone https://github.com/devaldaki3/BudgetBudy.git
-cd BudgetBudy
-```
+# 1. Clone
+git clone https://github.com/altshiftomar-del/hisabos.git
+cd hisabos
 
-#### 2. Install Requirements
-
-Make sure Flutter is installed and configured:
-
-```bash
-flutter doctor
-```
-
-Then install project dependencies:
-
-```bash
+# 2. Install deps
 flutter pub get
-```
 
-#### 3. Run the Application
-
-```bash
+# 3. Run
 flutter run
-```
 
-Select your device/emulator when prompted.  
-The app will start with the **Home** screen (spending tabs). You can navigate to the Khatabook ledger from the drawer or dedicated navigation option.
-
-#### 4. Build APK (Optional)
-
-To build your own release APK:
-
-```bash
+# 4. Build APK
 flutter build apk --release
+# Output: build/app/outputs/flutter-apk/app-release.apk
 ```
 
-The APK will be generated at: `build/app/outputs/flutter-apk/app-release.apk`
+---
 
+## Architecture
 
-## Model & Data Layer
+```
+lib/
+├── main.dart                 # App entry, theme, routes
+├── models/                   # Data models
+│   ├── transaction.dart      # Personal spending
+│   ├── pie_data.dart         # Chart data
+│   ├── party.dart            # Party contact
+│   └── transaction_model.dart # Party ledger transaction
+├── constants/
+│   └── categories.dart       # Expense categories
+├── database/
+│   └── db_helper.dart        # SQLite (khatabook.db)
+├── DBhelp/
+│   └── dbhelper.dart         # SQLite (spendings.db)
+├── screens/
+│   ├── home_screen.dart      # Main dashboard
+│   ├── new_transaction.dart  # Add expense
+│   ├── party_list_screen.dart # Party ledger list
+│   ├── party_profile_screen.dart # Party detail
+│   ├── transaction_detail_screen.dart
+│   ├── add_party_screen.dart
+│   ├── statistics/           # Charts (pie, weekly, yearly)
+│   └── transactions/         # Daily/weekly/monthly/yearly lists
+└── widgets/                  # Reusable UI components
+```
 
-### Personal Spending (`Transaction` / `Transactions`)
+---
 
-- **Transaction Model**:
-  - `id`, `title`, `amount`, `date`, `category`
-- **Transactions Provider**:
-  - Stores list of transactions in memory
-  - Persists data via `DBhelp/dbhelper.dart` into `spendings.db`
-  - Provides CRUD operations: `addTransactions`, `deleteTransaction`, `fetchTransactions`
-  - Filters: daily, weekly, monthly, yearly, recent (last 7 days)
-  - Aggregations for charts and totals
+## Data Models
+
+### Personal Spending (`Transaction`)
+- `id`, `title`, `amount`, `date`, `category`
 
 ### Party Ledger (`Party`, `TransactionModel`)
+- **Party**: `id`, `name`, `phone`
+- **TransactionModel**: `partyId`, `amount`, `type (gave/got)`, `date`, `note`
 
-- **Party Model**:
-  - `id`, `name`, `phone`
-- **TransactionModel**:
-  - `id?`, `partyId`, `amount`, `type (gave/got)`, `date`, `note`
-- **Database Helper** (`database/db_helper.dart`):
-  - Creates and manages `khatabook.db`
-  - Tables:
-    - `parties` (id, name, phone)
-    - `transactions` (linked to parties via foreign key)
-  - Provides functions to:
-    - Insert/update/delete parties and transactions
-    - Compute per-party balance and totals
-    - Get transactions by party ID
+---
 
-## Analytics
+## License
 
-- **Time-Based Analytics**: Daily, weekly, monthly, yearly spending breakdowns
-- **Chart Visualizations**: Using `fl_chart` for pie charts and bar graphs
-- **Balance Summary**:
-  - Total spending across all transactions
-  - "You will give" vs "You will get" totals for party ledger
-- **Recent Activity**: Last 7 days transaction view
+MIT License — see [LICENSE](LICENSE)
 
-## 🤝 Contributing
+---
 
-Contributions are welcome! Please check out our [Contributing Guidelines](CONTRIBUTING.md) for details on how to get started.
+## Credits
 
-### Ways to Contribute:
-- 🐛 Report bugs
-- 💡 Suggest new features
-- 🔧 Submit pull requests
-- 📝 Improve documentation
-- ⭐ Star this repository
+- Based on [BudgetBudy](https://github.com/devaldaki3/BudgetBudy) by [@devaldaki3](https://github.com/devaldaki3) (MIT)
+- Developed with ❤️ for the Bengali finance community
 
-## 📄 License
+---
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Support
 
-## 👨‍💻 Author
-
-Developed with ❤️ by [@devaldaki3](https://github.com/devaldaki3)
-
-## 🙏 Support
-
-If you find this project helpful:
-- ⭐ **Star this repository** to show your support
-- 🐛 **Report issues** on the [Issues page](https://github.com/devaldaki3/BudgetBudy/issues)
-- 💬 **Share feedback** and suggestions
-- 🔄 **Fork and contribute** to make it better
-
-## 📞 Contact
-
-Have questions or suggestions? Feel free to:
-- Open an [issue](https://github.com/devaldaki3/BudgetBudy/issues)
-- Start a [discussion](https://github.com/devaldaki3/BudgetBudy/discussions)
-
-
-## Screenshots
-
-<div align="center">
-
-<table>
-<tr>
-<td width="50%">
-
-**Home Screen - Daily Spending**
-
-<img src="assets/images/Home_Screen.png" alt="Home Screen" width="100%" />
-
-</td>
-<td width="50%">
-
-**Party List - Khatabook Ledger**
-
-<img src="assets/images/Party_List.png" alt="Party List" width="100%" />
-
-</td>
-</tr>
-</table>
-
-</div>
-
-[⬆️ Back to Top](#table-of-contents)
+- ⭐ Star this repo
+- 🐛 [Report issues](https://github.com/altshiftomar-del/hisabos/issues)
+- 💬 [Discussions](https://github.com/altshiftomar-del/hisabos/discussions)

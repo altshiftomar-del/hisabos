@@ -1,4 +1,4 @@
-import 'package:daily_spending/models/transaction.dart';
+import 'package:hisabos/models/transaction.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -110,3 +110,4 @@ class _TransactionListItemsState extends State<TransactionListItems> {
         ));
   }
 }
+

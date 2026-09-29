@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import 'package:daily_spending/models/transaction.dart';
-import 'package:daily_spending/constants/categories.dart';
+import 'package:hisabos/models/transaction.dart';
+import 'package:hisabos/constants/categories.dart';
 
 class NewTransaction extends StatefulWidget {
   static const routeName = '/new-transaction';
@@ -225,3 +225,4 @@ class _NewTransactionState extends State<NewTransaction> {
     );
   }
 }
+

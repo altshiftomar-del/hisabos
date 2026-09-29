@@ -127,3 +127,4 @@ class DBHelper {
     return await db.delete('parties', where: 'id = ?', whereArgs: [partyId]);
   }
 }
+

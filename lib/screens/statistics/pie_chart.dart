@@ -1,6 +1,6 @@
-import 'package:daily_spending/models/pie_data.dart';
-import 'package:daily_spending/widgets/pie_chart_widgets/indicators_widget.dart';
-import 'package:daily_spending/widgets/pie_chart_widgets/pie_chart_sections.dart';
+import 'package:hisabos/models/pie_data.dart';
+import 'package:hisabos/widgets/pie_chart_widgets/indicators_widget.dart';
+import 'package:hisabos/widgets/pie_chart_widgets/pie_chart_sections.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -68,3 +68,4 @@ class _MyPieChartState extends State<MyPieChart> {
     );
   }
 }
+

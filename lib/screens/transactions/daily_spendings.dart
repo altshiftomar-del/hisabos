@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:daily_spending/models/pie_data.dart';
-import 'package:daily_spending/models/transaction.dart';
-import 'package:daily_spending/screens/statistics/pie_chart.dart';
-import 'package:daily_spending/widgets/no_trancaction.dart';
-import 'package:daily_spending/widgets/transaction_list_items.dart';
+import 'package:hisabos/models/pie_data.dart';
+import 'package:hisabos/models/transaction.dart';
+import 'package:hisabos/screens/statistics/pie_chart.dart';
+import 'package:hisabos/widgets/no_trancaction.dart';
+import 'package:hisabos/widgets/transaction_list_items.dart';
 
 class DailySpendings extends StatefulWidget {
   @override
@@ -102,3 +102,4 @@ class _DailySpendingsState extends State<DailySpendings> {
     );
   }
 }
+

@@ -97,3 +97,4 @@ class _AddPartyScreenState extends State<AddPartyScreen> {
     );
   }
 }
+

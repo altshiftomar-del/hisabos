@@ -24,3 +24,4 @@ class NoTransactions extends StatelessWidget {
     );
   }
 }
+

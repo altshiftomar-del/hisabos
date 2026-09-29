@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Money Tracker',
+            title: 'HisabOS',
             theme: ThemeData(
               // Primary brand color
               primaryColor: const Color(0xFFA80852),
@@ -74,3 +74,4 @@ class MyApp extends StatelessWidget {
         });
   }
 }
+

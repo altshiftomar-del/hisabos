@@ -1,5 +1,5 @@
-name: daily_spending
-description: A new Flutter project.
+name: hisabos
+description: "HisabOS - Personal Finance Manager with Khatabook-style Party Ledger"
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
