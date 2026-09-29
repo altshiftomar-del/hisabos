@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  push:
+    branches: [main, opencode/*, codex/*]
+  pull_request:
+    branches: [main]
+
+jobs:
+  analyze:
+    name: Analyze & Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: flutter-actions/setup-flutter@v3
+        with:
+          channel: stable
+          version: 'latest'
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Generate code (if using build_runner)
+        run: |
+          if grep -q "build_runner" pubspec.yaml; then
+            dart run build_runner build --delete-conflicting-outputs
+          fi
+
+      - name: Analyze code
+        run: flutter analyze --no-fatal-infos
+
+      - name: Run tests
+        run: |
+          if [ -d "test" ]; then
+            flutter test --coverage
+          else
+            echo "No test directory found, skipping tests"
+          fi
+
+      - name: Check formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+  build-android:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+    needs: analyze
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: flutter-actions/setup-flutter@v3
+        with:
+          channel: stable
+          version: 'latest'
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Build APK (debug)
+        run: flutter build apk --debug
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hisabos-debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
+          retention-days: 7
+
+  build-web:
+    name: Build Web
+    runs-on: ubuntu-latest
+    needs: analyze
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: flutter-actions/setup-flutter@v3
+        with:
+          channel: stable
+          version: 'latest'
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Build Web
+        run: flutter build web --release
+
+      - name: Upload Web artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hisabos-web-build
+          path: build/web
+          retention-days: 7

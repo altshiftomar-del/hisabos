@@ -845,4 +845,3 @@ class _BouncingArrowState extends State<_BouncingArrow>
     );
   }
 }
-

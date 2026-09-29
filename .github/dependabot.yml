@@ -1,0 +1,42 @@
+version: 2
+updates:
+  - package-ecosystem: "pub"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "pub"
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      flutter-sdk:
+        patterns:
+          - "flutter*"
+      dev-deps:
+        patterns:
+          - "*_test"
+          - "flutter_lints"
+          - "build_runner*"
+          - "mock*"
+      regular-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "*_test"
+          - "flutter_lints"
+          - "build_runner*"
+          - "mock*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    labels:
+      - "dependencies"
+      - "github-actions"

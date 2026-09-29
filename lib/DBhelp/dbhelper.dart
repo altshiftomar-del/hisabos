@@ -35,4 +35,3 @@ class DBHelper {
     await sqlDb.delete('transactions', where: "id=?", whereArgs: [id]);
   }
 }
-

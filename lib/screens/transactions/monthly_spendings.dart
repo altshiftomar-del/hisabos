@@ -168,4 +168,3 @@ class _MonthlySpendingsState extends State<MonthlySpendings> {
     );
   }
 }
-

@@ -134,4 +134,3 @@ class _WeeklySpendingsState extends State<WeeklySpendings> {
     );
   }
 }
-

@@ -102,4 +102,3 @@ class _DailySpendingsState extends State<DailySpendings> {
     );
   }
 }
-

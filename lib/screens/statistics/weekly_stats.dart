@@ -206,4 +206,3 @@ class _WeaklyStatsState extends State<WeaklyStats> {
     );
   }
 }
-
