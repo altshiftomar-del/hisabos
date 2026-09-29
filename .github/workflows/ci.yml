@@ -63,7 +63,7 @@ jobs:
         run: flutter build apk --debug
 
       - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: hisabos-debug-apk
           path: build/app/outputs/flutter-apk/app-debug.apk
@@ -92,7 +92,7 @@ jobs:
         run: flutter build web --release
 
       - name: Upload Web artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: hisabos-web-build
           path: build/web
