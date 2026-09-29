@@ -54,4 +54,3 @@ class IndicatorsWidget extends StatelessWidget {
         ],
       );
 }
-

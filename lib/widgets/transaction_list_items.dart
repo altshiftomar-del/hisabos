@@ -110,4 +110,3 @@ class _TransactionListItemsState extends State<TransactionListItems> {
         ));
   }
 }
-

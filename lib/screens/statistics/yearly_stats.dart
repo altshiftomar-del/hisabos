@@ -175,4 +175,3 @@ class _YearlyStatsState extends State<YearlyStats> {
     );
   }
 }
-

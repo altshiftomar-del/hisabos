@@ -205,4 +205,3 @@ class _YearlySpendingsState extends State<YearlySpendings> {
     );
   }
 }
-

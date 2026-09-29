@@ -306,4 +306,3 @@ class _PartyListScreenState extends State<PartyListScreen> {
     );
   }
 }
-

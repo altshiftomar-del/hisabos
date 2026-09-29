@@ -12,4 +12,3 @@ List<String> categories = [
   'Gift',
   'Other',
 ];
-

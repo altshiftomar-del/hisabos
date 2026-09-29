@@ -117,7 +117,7 @@ class _NewTransactionState extends State<NewTransaction> {
                 ),
                 onPressed: () {
                   FocusScope.of(context).unfocus();
-                  
+
                   // Validate title
                   if (inputTitleController.text.trim().isEmpty) {
                     ScaffoldMessenger.of(context).hideCurrentSnackBar();
@@ -133,11 +133,11 @@ class _NewTransactionState extends State<NewTransaction> {
                     );
                     return;
                   }
-                  
+
                   // Validate amount with safe parsing
                   final amountText = inputAmountController.text.trim();
                   final enteredAmount = int.tryParse(amountText);
-                  
+
                   if (enteredAmount == null || enteredAmount < 0) {
                     ScaffoldMessenger.of(context).hideCurrentSnackBar();
                     ScaffoldMessenger.of(context).showSnackBar(
@@ -152,7 +152,7 @@ class _NewTransactionState extends State<NewTransaction> {
                     );
                     return;
                   }
-                  
+
                   final enteredTitle = inputTitleController.text.trim();
 
                   transactions.addTransactions(
@@ -225,4 +225,3 @@ class _NewTransactionState extends State<NewTransaction> {
     );
   }
 }
-
